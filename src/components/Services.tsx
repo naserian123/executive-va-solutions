@@ -1,21 +1,11 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Palette, Calendar, TrendingUp, Search, Plane, Mail, PenTool } from "lucide-react";
+import { Palette, Share2, Search, Database } from "lucide-react";
 
 const services = [
   {
-    icon: Palette,
-    title: "Graphic Design",
-    description: "Creating visually stunning designs that capture your brand's essence and communicate effectively with your audience.",
-  },
-  {
-    icon: Calendar,
-    title: "Calendar & Inbox Management",
-    description: "Streamline your schedule and communications. Never miss an important meeting or email again with expert organization.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Lead Generation",
-    description: "Strategic prospecting and outreach to help grow your business with qualified leads and potential clients.",
+    icon: Share2,
+    title: "Social Media Management",
+    description: "Strategic content creation and scheduling to grow your online presence and engage your audience effectively.",
   },
   {
     icon: Search,
@@ -23,19 +13,14 @@ const services = [
     description: "In-depth analysis of market trends, competitors, and opportunities to inform your business decisions.",
   },
   {
-    icon: Plane,
-    title: "Travel Planning",
-    description: "Comprehensive travel arrangements from flights to accommodations, ensuring smooth and efficient business trips.",
+    icon: Palette,
+    title: "Graphic Design",
+    description: "Creating visually stunning designs that capture your brand's essence and communicate effectively with your audience.",
   },
   {
-    icon: Mail,
-    title: "Email Marketing",
-    description: "Crafting compelling email campaigns that engage your audience and drive conversions.",
-  },
-  {
-    icon: PenTool,
-    title: "Copywriting",
-    description: "Persuasive and engaging content that resonates with your target audience and achieves your goals.",
+    icon: Database,
+    title: "Data Entry",
+    description: "Accurate and efficient data management to keep your business information organized and accessible.",
   },
 ];
 
@@ -50,7 +35,7 @@ const Services = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
