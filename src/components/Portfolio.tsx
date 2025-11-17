@@ -1,11 +1,16 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle2 } from "lucide-react";
+import socialMediaSample from "@/assets/sample-social-media.jpg";
+import marketResearchSample from "@/assets/sample-market-research.jpg";
+import graphicDesignSample from "@/assets/sample-graphic-design.jpg";
+import dataEntrySample from "@/assets/sample-data-entry.jpg";
 
 const portfolioSamples = [
   {
     service: "Social Media Management",
     title: "Growing a Fitness Brand's Instagram",
+    image: socialMediaSample,
     clientProblem: "A local fitness studio had only 200 followers and low engagement. They needed to reach more people in their area.",
     steps: [
       "Created a content calendar with 4 posts per week",
@@ -19,6 +24,7 @@ const portfolioSamples = [
   {
     service: "Market Research",
     title: "Competitor Analysis for Online Store",
+    image: marketResearchSample,
     clientProblem: "An online clothing store wanted to understand why competitors were getting more sales. They needed insights to improve their pricing and product offerings.",
     steps: [
       "Identified the top 10 competitors in the same market",
@@ -32,6 +38,7 @@ const portfolioSamples = [
   {
     service: "Graphic Design",
     title: "Complete Brand Identity for Consulting Business",
+    image: graphicDesignSample,
     clientProblem: "A new business consultant needed professional branding materials but had no logo, business cards, or presentation templates.",
     steps: [
       "Conducted discovery call to understand brand values and target audience",
@@ -45,6 +52,7 @@ const portfolioSamples = [
   {
     service: "Data Entry",
     title: "Customer Database Organization",
+    image: dataEntrySample,
     clientProblem: "A real estate agency had 3 years of client information scattered across emails, spreadsheets, and paper files. They couldn't find contact details quickly.",
     steps: [
       "Collected all customer information from various sources",
@@ -74,6 +82,13 @@ const Portfolio = () => {
               key={index}
               className="overflow-hidden border-border/50 hover:shadow-lg transition-shadow"
             >
+              <div className="aspect-video w-full overflow-hidden bg-muted">
+                <img 
+                  src={sample.image} 
+                  alt={sample.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <CardHeader className="bg-muted/30">
                 <Badge className="w-fit mb-2">{sample.service}</Badge>
                 <CardTitle className="text-2xl">{sample.title}</CardTitle>
